@@ -1,0 +1,30 @@
+# Création du dossier de travail
+mkdir TP1
+cd TP1
+
+# Création des fichiers nécessaires
+touch Dockerfile app.py requirements.txt
+
+# Contenu de requirements.txt
+echo "flask" > requirements.txt
+
+# Contenu de app.py (édité manuellement avec un éditeur)
+
+# Construction de l’image Docker
+docker build -t emmanuel-flask-app .
+
+# Exécution du conteneur (1er lancement)
+docker run -d -p 7500:7500 emmanuel-flask-app
+
+# Vérification des conteneurs en cours d’exécution
+docker ps
+
+# Connexion à DockerHub
+docker login -u emmanuelf365
+
+# Tag de l’image pour DockerHub
+docker tag emmanuel-flask-app emmanuelf365/emmanuel-flask-app
+
+# Pousser l’image sur DockerHub
+docker push emmanuelf365/emmanuel-flask-app
+
