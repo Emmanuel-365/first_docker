@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6">
+        <h1 class="mb-4">Contactez-nous</h1>
+        <p class="lead">Nous sommes là pour répondre à vos questions et vous aider à concrétiser vos projets.</p>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-map-marker-alt text-primary me-2"></i>Adresse</h5>
+                <p class="card-text">123 Rue de l'Innovation, 75000 Paris, France</p>
+                
+                <h5 class="card-title mt-4"><i class="fas fa-envelope text-primary me-2"></i>Email</h5>
+                <p class="card-text">contact@flaskdocker.com</p>
+                
+                <h5 class="card-title mt-4"><i class="fas fa-phone text-primary me-2"></i>Téléphone</h5>
+                <p class="card-text">+237 6 23 45 67 89</p>
+                
+                <h5 class="card-title mt-4"><i class="fas fa-clock text-primary me-2"></i>Heures d'ouverture</h5>
+                <p class="card-text">Lundi - Vendredi : 9h00 - 18h00</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-question-circle text-primary me-2"></i>FAQ</h5>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Qu'est-ce que Docker ?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Docker est une plateforme de conteneurisation qui permet d'empaqueter une application avec toutes 
+                                ses dépendances dans un conteneur isolé, facilitant ainsi son déploiement et sa gestion.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Pourquoi utiliser Flask avec Docker ?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                La combinaison de Flask et Docker offre une solution légère, flexible et facile à déployer pour 
+                                le développement d'applications web. Docker garantit que votre application fonctionnera de la même 
+                                manière dans tous les environnements.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Proposez-vous des formations ?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Oui, nous proposons des formations sur Flask, Docker et d'autres technologies web. 
+                                Contactez-nous pour plus d'informations sur nos programmes de formation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Envoyez-nous un message</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('contact') }}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom complet</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Adresse email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Sujet</label>
+                        <select class="form-select" id="subject" name="subject">
+                            <option selected>Choisir un sujet</option>
+                            <option value="general">Question générale</option>
+                            <option value="quote">Demande de devis</option>
+                            <option value="support">Support technique</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                        <label class="form-check-label" for="consent">
+                            J'accepte que mes données soient utilisées pour me recontacter
+                        </label>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

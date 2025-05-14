@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-4">Bienvenue sur FlaskDocker</h1>
+    <p class="lead">Une application Flask moderne conteneurisée avec Docker</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4 shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="card-title"><i class="fas fa-rocket text-primary me-2"></i>Notre Mission</h2>
+                <p class="card-text">
+                    Nous démontrons comment déployer des applications web Flask modernes
+                    en utilisant Docker pour une conteneurisation efficace et flexible.
+                </p>
+                <p class="card-text">
+                    Cette application est un exemple concret de déploiement d'un site web
+                    multi-pages avec une interface utilisateur attrayante et responsive.
+                </p>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4 shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="card-title"><i class="fas fa-cogs text-primary me-2"></i>Caractéristiques</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Application Flask à plusieurs pages</li>
+                    <li class="list-group-item">Design responsive avec Bootstrap 5</li>
+                    <li class="list-group-item">Formulaire de contact interactif</li>
+                    <li class="list-group-item">Structure organisée pour le développement</li>
+                    <li class="list-group-item">Conteneurisation avec Docker</li>
+                </ul>
+                <a href="{{ url_for('services') }}" class="btn btn-primary mt-3">Découvrir nos services</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div class="card bg-light">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Comment ça marche</h2>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="circle-icon bg-primary text-white mb-3">
+                            <i class="fas fa-code fa-2x"></i>
+                        </div>
+                        <h4>Développement</h4>
+                        <p>Création d'une application Flask moderne avec multiples pages et fonctionnalités</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="circle-icon bg-primary text-white mb-3">
+                            <i class="fab fa-docker fa-2x"></i>
+                        </div>
+                        <h4>Conteneurisation</h4>
+                        <p>Empaquetage de l'application avec Docker pour une distribution simplifiée</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="circle-icon bg-primary text-white mb-3">
+                            <i class="fas fa-cloud fa-2x"></i>
+                        </div>
+                        <h4>Déploiement</h4>
+                        <p>Déploiement facile sur n'importe quelle plateforme supportant Docker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

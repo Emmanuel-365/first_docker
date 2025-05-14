@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4">À propos de nous</h1>
+        
+        <div class="card mb-5">
+            <div class="card-body">
+                <h2 class="card-title"><i class="fas fa-building text-primary me-2"></i>Notre Entreprise</h2>
+                <p class="card-text">
+                    FlaskDocker est une entreprise spécialisée dans le développement d'applications web modernes et leur déploiement
+                    en utilisant les technologies de conteneurisation. Nous croyons que la combinaison de Flask et Docker offre
+                    une solution flexible et évolutive pour le développement d'applications web.
+                </p>
+                <p class="card-text">
+                    Avec plus de 5 ans d'expérience dans le domaine, notre équipe a travaillé sur divers projets
+                    allant de petites applications web à des solutions d'entreprise à grande échelle.
+                </p>
+            </div>
+        </div>
+        
+        <div class="card mb-5">
+            <div class="card-body">
+                <h2 class="card-title"><i class="fas fa-flask text-primary me-2"></i>Pourquoi Flask ?</h2>
+                <p class="card-text">
+                    Flask est un micro-framework Python léger et flexible qui permet de créer des applications web rapidement
+                    et efficacement. Sa simplicité et sa modularité en font un choix idéal pour les développeurs qui souhaitent
+                    avoir un contrôle total sur leur application.
+                </p>
+                <p class="card-text">
+                    Quelques avantages de Flask :
+                </p>
+                <ul>
+                    <li>Léger et facile à comprendre</li>
+                    <li>Hautement personnalisable</li>
+                    <li>Grande communauté et excellent support</li>
+                    <li>Facilité d'intégration avec d'autres technologies</li>
+                    <li>Parfait pour les API RESTful et les applications web</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card mb-5">
+            <div class="card-body">
+                <h2 class="card-title"><i class="fab fa-docker text-primary me-2"></i>Pourquoi Docker ?</h2>
+                <p class="card-text">
+                    Docker est une plateforme de conteneurisation qui permet d'empaqueter une application avec toutes ses dépendances
+                    dans un conteneur isolé. Cela facilite grandement le déploiement et la gestion des applications.
+                </p>
+                <p class="card-text">
+                    Les avantages de Docker comprennent :
+                </p>
+                <ul>
+                    <li>Isolation des applications</li>
+                    <li>Portabilité entre différents environnements</li>
+                    <li>Déploiement rapide et facile</li>
+                    <li>Utilisation efficace des ressources</li>
+                    <li>Grande évolutivité</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title"><i class="fas fa-users text-primary me-2"></i>Notre Équipe</h2>
+                <p class="card-text">
+                    Notre équipe est composée de développeurs passionnés et expérimentés dans le domaine du développement web
+                    et des technologies de conteneurisation. Nous sommes constamment à la recherche de nouvelles façons d'améliorer
+                    nos processus et d'offrir des solutions innovantes à nos clients.
+                </p>
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

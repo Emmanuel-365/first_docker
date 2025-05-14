@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build: .
+    container_name: flask-docker-app
+    ports:
+      - "7500:7500"
+    volumes:
+      - ./app.py:/app/app.py
+      - ./static:/app/static
+      - ./templates:/app/templates
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    # Commande pour exécuter l'application en mode développement (hot reload)
+    command: python app.py
